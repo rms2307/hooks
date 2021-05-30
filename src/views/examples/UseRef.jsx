@@ -12,7 +12,9 @@ const UseRef = (props) => {
 
     useEffect(function () {
         count.current = count.current + 1
-        myInput2.current.focus()
+        if (value1.length > 10) {
+            myInput2.current.focus()
+        }
     }, [value1])
 
     useEffect(function () {
